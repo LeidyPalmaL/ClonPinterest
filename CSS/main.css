@@ -1,0 +1,297 @@
+:root{
+    box-sizing: border-box;
+    font-size: 16px;
+    --column_width: 14.75rem;
+    --row_increment: 0.5rem;
+    --card_border_radius: 1rem;
+    --pin_small: 26;
+    --pin_medium: 33;
+    --pin_large: 45;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+main{
+    position: absolute;
+    top: 5.6rem;
+    width: 100%;
+}
+body{
+    margin: 0;
+}
+
+#navbar-pinterest{
+    width: 100%;
+    height: 5.5rem;
+    /* padding: 1rem; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navLeft{
+    width: 15rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navRight{
+    width: 8rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    background-color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 6px;
+    padding-bottom: 1px;
+}
+.logo:hover{
+    background-color: lightgray;
+    border-radius: 1rem;
+}
+.logo img{
+    width: 1.5rem;
+}
+.btnRight{
+    background-color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 6px;
+    padding-bottom: 1px;
+    display: absolute;
+}
+.btnRight:hover {
+    background-color: lightgray;
+    border-radius: 1.5rem;
+}
+.notifications img{
+    width: 2rem;
+}
+.message img{
+    width: 2rem;
+}
+.profile-img img{
+    width: 1.5rem;
+}
+#navCenter{
+    background-color:whitesmoke;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    border-radius: 50px;
+}
+#navCenter:hover{
+    background-color: lightgrey;
+}
+#navCenter:hover .x{
+    display: block;
+}
+#navCenter:hover #input-search{
+    background-color: lightgrey;
+}
+.lupa{
+    position: relative;
+    color: black;
+}
+
+.finder{
+    position: relative;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#input-search{
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color:whitesmoke;
+}
+#input-search:focus{
+    background-color: lightgrey;
+    border: none;
+}
+.x{
+    position: relative;
+    display: none;
+}
+.x img{
+    width: 1rem;
+}
+
+#card-image-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, var(--column_width) );
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+}
+.card-image{
+    position: relative;
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+}
+.card-image-small{
+    grid-row-end: span var(--pin_small);
+}
+.card-image-small .Btn3Puntos {
+    top: 8.5rem;
+}
+.card-image-small .BtnCompartir {
+    top: 8.5rem;
+}
+.card-image-medium{
+    grid-row-end: span var(--pin_medium);
+}
+.card-image-medium .Btn3Puntos{
+    top: 12rem;
+}
+.card-image-medium .BtnCompartir{
+    top: 12rem;
+}
+.card-image-large{
+    grid-row-end: span var(--pin_large);
+}
+.card-image-large .Btn3Puntos{
+    top: 18rem;
+}
+.card-image-large .BtnCompartir{
+    top: 18rem;
+}
+.Imagen{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--card_border_radius);
+    z-index: 5;
+}
+.BtnGuardar{
+    position: absolute;
+    z-index: 6;
+    top: 0.5rem;
+    left: 6rem;
+    background-color: red;
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 6rem;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    display: none;
+}
+#BtnInicio{
+    /* position: absolute;
+    z-index: 6;
+    top: 20%;
+    left: 3rem; */
+    background-color: black;
+    color: white;
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 4rem;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+}
+#BtnHoy{
+    /* position: absolute;
+    z-index: 6;
+    top: 20%; */
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: white;
+}
+#BtnCrear{
+    /* position: absolute;
+    z-index: 6;
+    top: 20%; */
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 4rem;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: white;
+}
+.Btn3Puntos{
+    position: absolute;
+    z-index: 6;
+    border: none;
+    left: 11rem;
+    height: 1rem;
+    background-color: white;
+    width: 1.85rem;
+    height: 1.85rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+ }
+.Btn3Puntos img{
+    width: 2rem;
+    border: none;
+}
+.BtnCompartir{
+    position: absolute;
+    z-index: 6;
+    border: none;
+    left: 8rem;
+    height: 1rem;
+    background-color: white;
+    width: 1.85rem;
+    height: 1.85rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
+.BtnCompartir img{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.card-image:hover .BtnGuardar{
+    display: block;
+}
+.card-image:hover .BtnCompartir{
+    display: block;
+}
+.card-image:hover .Btn3Puntos{
+    display: block;
+}
+.BtnCompartir:hover{
+    background-color: lightgray;
+}
+.Btn3Puntos:hover{
+    background-color: lightgray;
+}
+.tooltip {
+    display: none;
+    border-top: 1px black;
+    text-decoration: none;
+    color:white;
+    background-color: black;
+    left: -5rem;
+    border-radius: 1rem;
+    font-size: 8px;
+}
